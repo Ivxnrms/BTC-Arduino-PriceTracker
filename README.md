@@ -11,7 +11,7 @@ LIBRERIAS
 - ArduinoJson (https://github.com/arduino-libraries/Arduino_JSON)
 
   ⚠ Nota: Puede que necesites instalar también la librería "WiFiClient.h", aunque esta debería
-  estar incluida en el Core del ESP8266, al igual que las demás.
+  estar incluida en el Core del ESP8266, al igual que "ESP8266WiFi.h" y "ESP8266HTTPClient.h".
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
