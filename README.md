@@ -6,18 +6,21 @@ Este programa es un tracker del precio del BTC, el cual se muestra a tiempo real
 LIBRERIAS
 
 - Adafruit_SSD1306 (https://github.com/adafruit/Adafruit_SSD1306)
-- ESP8266 Core (https://github.com/esp8266/Arduino/tree/master
+- Wire.h (Viene incluida en Arduino IDE)
+- ESP8266 Core (https://github.com/esp8266/Arduino/tree/master)
 - ArduinoJson (https://github.com/arduino-libraries/Arduino_JSON)
 
-  Nota: Puede que necesites instalar también la librería "WiFiClient.h", aunque esta debería estar incluida en el Core del ESP8266, al igual que las demás.
+⚠ Nota: Puede que necesites instalar también la librería "WiFiClient.h", aunque esta debería estar incluida en el Core del ESP8266, al igual que las demás.
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 PASOS A SEGUIR:
 
-- Cambiar los parámetros en la pestaña "secrets.h"
+- Seleccionar la placa "Generic ESP8266 Module"
+- Seleccionar el puerto serie
 - Cambiar los parámetros en las variables de las líneas 14 y 15
+- Cambiar los parámetros en la pestaña "secrets.h"
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
