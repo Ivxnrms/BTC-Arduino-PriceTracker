@@ -4,11 +4,11 @@
 #include <WiFiClient.h>
 #include <ESP8266HTTPClient.h>
 #include <ArduinoJson.h>
-#include "secrets.h" // WiFi Configuration (WiFi name and Password)
-#define SCREEN_WIDTH 128 // OLED display width, in pixels
-#define SCREEN_HEIGHT 64 // OLED display height, in pixels
-#define OLED_RESET     -1 // Reset pin # (or -1 if sharing Arduino reset pin)
-#define SCREEN_ADDRESS 0x3C ///< See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32
+#include "secrets.h" 
+#define SCREEN_WIDTH 128 
+#define SCREEN_HEIGHT 64 
+#define OLED_RESET     -1 
+#define SCREEN_ADDRESS 0x3C 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 const char* ssid = "TU-SSID";
@@ -19,7 +19,7 @@ const String url = "http://api.coindesk.com/v1/bpi/currentprice.json";
 const String historyURL = "http://api.coindesk.com/v1/bpi/historical/close.json";
 const String cryptoCode = "BTC";
 
-// 'icons8-bitcoin-24', 24x24px
+// Logo del Bitcoin
 const unsigned char bitcoinIcon [] PROGMEM = {
 0x00, 0x7e, 0x00, 0x03, 0xff, 0xc0, 0x07, 0x81, 0xe0, 0x0e, 0x00, 0x70, 0x18, 0x28, 0x18, 0x30, 
 0x28, 0x0c, 0x70, 0xfc, 0x0e, 0x60, 0xfe, 0x06, 0x60, 0xc7, 0x06, 0xc0, 0xc3, 0x03, 0xc0, 0xc7, 
@@ -37,7 +37,7 @@ void setup() {
 
   if (!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
     Serial.println(F("SSD1306 allocation failed"));
-    for (;;); // Don't proceed, loop forever
+    for (;;); 
   }
 
   display.clearDisplay();
@@ -112,19 +112,16 @@ void loop() {
         return;
       }
 
-      //Display Header
-//      display.clearDisplay();
-//      display.setTextSize(1);
-//      printCenter("BTC/USD", 0, 0);
+
       display.clearDisplay();
       display.drawBitmap((128/2) - (24/2), 0, bitcoinIcon, 24, 24, WHITE);
       display.display();
 
-      //Display BTC Price
+      
       display.setTextSize(2);
       printCenter("$" + BTCUSDPrice, 0, 32);
 
-      //Display 24hr. Percent Change
+      
       double yesterdayPrice = historyDoc["bpi"]["2021-03-20"].as<double>();
       bool isUp = BTCUSDPrice.toDouble() > yesterdayPrice;
       double percentChange;
@@ -150,7 +147,7 @@ void printCenter(const String buf, int x, int y)
 {
   int16_t x1, y1;
   uint16_t w, h;
-  display.getTextBounds(buf, x, y, &x1, &y1, &w, &h); //calc width of new string
+  display.getTextBounds(buf, x, y, &x1, &y1, &w, &h); 
   display.setCursor((x - w / 2) + (128 / 2), y);
   display.print(buf);
 }
