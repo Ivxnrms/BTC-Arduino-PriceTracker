@@ -54,7 +54,7 @@ void setup() {
     delay(500);
   }
 
-  Serial.print("CONECTADO A SSID: ");
+  Serial.print("CONECTADO A: ");
   Serial.println(ssid);
 
   display.print("Conectado a ");
