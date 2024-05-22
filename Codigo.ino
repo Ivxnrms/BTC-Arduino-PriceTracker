@@ -36,7 +36,7 @@ void setup() {
   Serial.begin(115200);
 
   if (!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
-    Serial.println(F("SSD1306 allocation failed"));
+    Serial.println(F("ASIGNACION DE SSD1306 FALLIDA"));
     for (;;); 
   }
 
@@ -44,7 +44,7 @@ void setup() {
   display.setTextSize(1);           
   display.setTextColor(SSD1306_WHITE);      
   display.setCursor(0,0); 
-  display.println("Connecting to WiFi...");
+  display.println("Conectando al WiFi...");
   display.display();
 
   WiFi.begin(ssid, password);
@@ -54,10 +54,10 @@ void setup() {
     delay(500);
   }
 
-  Serial.print("CONNECTED to SSID: ");
+  Serial.print("CONECTADO A SSID: ");
   Serial.println(ssid);
 
-  display.print("Connected to ");
+  display.print("Conectado a ");
   display.println(ssid);
   display.display();
   delay(5000);
@@ -65,7 +65,7 @@ void setup() {
 
 void loop() {
   if (WiFi.status() == WL_CONNECTED) {
-    Serial.println("Getting current data...");
+    Serial.println("Leyendo datos...");
 
     http.begin(wificlient, url);
     int httpCode = http.GET();
@@ -87,7 +87,7 @@ void loop() {
 
       String BTCUSDPrice = doc["bpi"]["USD"]["rate_float"].as<String>();
       if(BTCUSDPrice == lastPrice) {
-        Serial.print("Price hasn't changed (Current/Last): ");
+        Serial.print("El precio no ha cambiado (Actual/Anterior): ");
         Serial.print(BTCUSDPrice);
         Serial.print(" : ");
         Serial.println(lastPrice);
@@ -99,7 +99,7 @@ void loop() {
       String lastUpdated = doc["time"]["updated"].as<String>();
       http.end();
 
-      Serial.println("Getting history...");
+      Serial.println("Obteniendo el historial...");
       StaticJsonDocument<1536> historyDoc;
       http.begin(wificlient, historyURL);
       int historyHttpCode = http.GET();
@@ -125,7 +125,7 @@ void loop() {
       double yesterdayPrice = historyDoc["bpi"]["2021-03-20"].as<double>();
       bool isUp = BTCUSDPrice.toDouble() > yesterdayPrice;
       double percentChange;
-      String dayChangeString = "24hr. Change: ";
+      String dayChangeString = "24hr. Cambio: ";
       if (isUp) {
         percentChange = ((BTCUSDPrice.toDouble() - yesterdayPrice) / yesterdayPrice) * 100;
       } else {
