@@ -31,7 +31,6 @@ CABLEADO
 
 RESULTADO FINAL
 
-![image](https://github.com/Ivxn37/Precio-del-BTC-con-ESP8266-a-tiempo-real/assets/74296930/69f5437e-8da9-4f0c-8b8e-bd65cefe51a5)
-
+![image](https://github.com/Ivxn37/Precio-del-BTC-con-ESP8266-a-tiempo-real/assets/74296930/aa1000d4-6751-48d8-9ba8-4e7c019293a5)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
