@@ -3,7 +3,7 @@ Este programa es un tracker del precio del BTC, el cual se muestra a tiempo real
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*LIBRERIAS*
+**LIBRERIAS**
 
 - Adafruit_SSD1306 (https://github.com/adafruit/Adafruit_SSD1306)
 - Wire.h (Viene incluida en Arduino IDE)
@@ -14,7 +14,7 @@ Este programa es un tracker del precio del BTC, el cual se muestra a tiempo real
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-PASOS A SEGUIR:
+**PASOS A SEGUIR:**
 
 - Seleccionar la placa "Generic ESP8266 Module"
 - Seleccionar el puerto serie
@@ -23,13 +23,13 @@ PASOS A SEGUIR:
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-CABLEADO
+**CABLEADO**
 
 ![wire-diagram](https://github.com/Ivxn-Rms/Precio-de-BTC-con-ESP8266-a-tiempo-real/assets/74296930/f5933080-764a-4733-8b97-98c53725967c)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-RESULTADO FINAL
+**RESULTADO FINAL**
 
 ![image](https://github.com/Ivxn37/Precio-del-BTC-con-ESP8266-a-tiempo-real/assets/74296930/aa1000d4-6751-48d8-9ba8-4e7c019293a5)
 
