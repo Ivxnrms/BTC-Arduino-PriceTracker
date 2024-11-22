@@ -3,7 +3,7 @@ Este programa es un tracker del precio del BTC, el cual se muestra a tiempo real
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-LIBRERIAS
+*LIBRERIAS*
 
 - Adafruit_SSD1306 (https://github.com/adafruit/Adafruit_SSD1306)
 - Wire.h (Viene incluida en Arduino IDE)
