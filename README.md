@@ -1,5 +1,5 @@
-# Tracker del precio del BTC a tiempo real con ESP8266 
-Este programa es un tracker del precio del BTC, el cual se muestra a tiempo real gracias al ESP8266(wifi) y un Adrafruit_SSD1306. Usando el módulo WiFi se convierte en cliente, accediendo a la API de CoinDesk mediante HTTP, y a su vez leyendo los datos de la API, para mostrar en pantalla en precio del Bitcoin en USD cada segundo 💲
+# Tracker del precio del BTC a tiempo real con Arduino ESP8266 
+Este programa es un tracker del precio del BTC, el cual se muestra a tiempo real gracias al Arduino ESP8266(wifi) y un Adrafruit_SSD1306. Usando el módulo WiFi se convierte en cliente, accediendo a la API de CoinDesk mediante HTTP, y a su vez leyendo los datos de la API, para mostrar en pantalla en precio del Bitcoin en USD cada segundo 💲
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
