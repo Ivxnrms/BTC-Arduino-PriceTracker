@@ -36,7 +36,7 @@ void setup() {
   Serial.begin(115200);
 
   if (!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
-    Serial.println(F("ASIGNACION DE SSD1306 FALLIDA"));
+    Serial.println(F("SSD1306 ASIGNATION ERROR"));
     for (;;); 
   }
 
@@ -44,7 +44,7 @@ void setup() {
   display.setTextSize(1);           
   display.setTextColor(SSD1306_WHITE);      
   display.setCursor(0,0); 
-  display.println("Conectando al WiFi...");
+  display.println("Connecting to Wi-Fi...");
   display.display();
 
   WiFi.begin(ssid, password);
@@ -65,7 +65,7 @@ void setup() {
 
 void loop() {
   if (WiFi.status() == WL_CONNECTED) {
-    Serial.println("Leyendo datos...");
+    Serial.println("Reading data...");
 
     http.begin(wificlient, url);
     int httpCode = http.GET();
@@ -87,7 +87,7 @@ void loop() {
 
       String BTCUSDPrice = doc["bpi"]["USD"]["rate_float"].as<String>();
       if(BTCUSDPrice == lastPrice) {
-        Serial.print("El precio no ha cambiado (Actual/Anterior): ");
+        Serial.print("Price didnt change (Current/Previous): ");
         Serial.print(BTCUSDPrice);
         Serial.print(" : ");
         Serial.println(lastPrice);
@@ -99,7 +99,7 @@ void loop() {
       String lastUpdated = doc["time"]["updated"].as<String>();
       http.end();
 
-      Serial.println("Obteniendo historial...");
+      Serial.println("Getting history...");
       StaticJsonDocument<1536> historyDoc;
       http.begin(wificlient, historyURL);
       int historyHttpCode = http.GET();
