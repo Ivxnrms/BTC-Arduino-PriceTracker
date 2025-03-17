@@ -117,14 +117,14 @@ void loop() {
       display.drawBitmap((128/2) - (24/2), 0, bitcoinIcon, 24, 24, WHITE);
       display.display();
 
- //Precio BTC
+ // BTC Price
  display.setTextSize(1);
  printCenter("$" + BTCUSDPrice, 0, 32);
 
- //Firma
+ // Signature
  display.setTextSize(1);
  display.setCursor(5, 55);
- display.println("@ivxn.ramos_ - RYC");
+ display.println("github.com/Ivxnrms");
 
       display.display();
       http.end();
