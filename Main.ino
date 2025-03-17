@@ -11,15 +11,15 @@
 #define SCREEN_ADDRESS 0x3C 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-const char* ssid = "TU-SSID";
-const char* password = "TU-CONTRASEÑA";
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
 
 // Powered by CoinDesk - https://www.coindesk.com/price/bitcoin
 const String url = "http://api.coindesk.com/v1/bpi/currentprice.json";
 const String historyURL = "http://api.coindesk.com/v1/bpi/historical/close.json";
 const String cryptoCode = "BTC";
 
-// Icono BTC
+// BTC logo
 const unsigned char bitcoinIcon [] PROGMEM = {
 0x00, 0x7e, 0x00, 0x03, 0xff, 0xc0, 0x07, 0x81, 0xe0, 0x0e, 0x00, 0x70, 0x18, 0x28, 0x18, 0x30, 
 0x28, 0x0c, 0x70, 0xfc, 0x0e, 0x60, 0xfe, 0x06, 0x60, 0xc7, 0x06, 0xc0, 0xc3, 0x03, 0xc0, 0xc7, 
